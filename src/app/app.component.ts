@@ -18,7 +18,7 @@ export class AppComponent {
     for(let i=0;i<tempArr.length;i++){
         if(tempArr[i].includes('-')){
           let range = tempArr[i].split('-');
-          for(let j=range[0];j<range[1];j++){
+          for(let j=range[0];j<=range[1];j++){
             if(this.arr.includes(j)){
               this.error += j + ",";
             }
@@ -29,6 +29,7 @@ export class AppComponent {
             duplicates.push(tempArr[i]);
             this.error += tempArr[i] + ",";
           }
+          // trying to add the new numbers into existing array
           // else{
           //   this.arr.push(parseInt(tempArr[i]));
           // }
