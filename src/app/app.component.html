@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h5>Please type in the desired number in the below textbox <sup class="red">**</sup> </h5>
+<input class="input" type="text" (keypress)="validNumberOnly($event)" [(ngModel)]='inputNum' (input)="onKeyPress($event)"><br><br>
+<label class="red">** &nbsp;</label><span>: the input box will only accept numbers or number range</span>
+</div>
+<div style="text-align:center">
+<h5 class="error" *ngIf="error">{{error}}</h5>
+</div>
+<router-outlet></router-outlet>
